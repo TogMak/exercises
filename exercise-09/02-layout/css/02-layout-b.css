@@ -1,0 +1,93 @@
+/* 02-layout-b.css */
+
+/* General styling */
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  grid-template-columns: 1fr 2fr; /* Two columns */
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+  grid-gap: 20px;
+  max-width: 960px;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+  grid-area: header;
+  background-color: #eee;
+  padding: 20px;
+}
+
+/* Navigation styling */
+nav {
+  grid-area: nav;
+  background-color: #eee;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "•";
+  color: blue;
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+/* Main content grid setup */
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/* Individual section styling */
+#welcome {
+  grid-column: 1 / span 2; /* Full width across both columns */
+  background-color: #ddd;
+  padding: 20px;
+}
+
+#cats, #coming-soon {
+  background-color: #ddd;
+  padding: 20px;
+}
+
+/* Footer styling */
+footer {
+  grid-area: footer;
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+small {
+  color: #666;
+}
+

@@ -1,0 +1,80 @@
+/* 01-layout-a.css */
+
+/* General body styling */
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  grid-template-columns: 1fr 2fr; /* Left and right columns */
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+  grid-gap: 20px; /* Space between rows and columns */
+  max-width: 960px;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+  grid-area: header;
+  background-color: #eee;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Navigation styling */
+nav {
+  grid-area: nav;
+  background-color: #eee;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "•"; /* Add a bullet before each item */
+  color: blue;
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: blue; /* Make the links blue */
+  font-weight: bold;
+}
+
+/* Main section styling */
+main {
+  grid-area: main;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+/* Footer styling */
+footer {
+  grid-area: footer;
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+small {
+  color: #666;
+}

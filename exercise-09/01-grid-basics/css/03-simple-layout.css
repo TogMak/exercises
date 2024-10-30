@@ -1,0 +1,79 @@
+/* 03-simple-layout.css */
+
+/* General styling */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 0; /* Remove default margin */
+  display: grid;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: start; /* Align at the top */
+  grid-template-columns: 1fr 2fr; /* Two columns: Right column is double the size */
+  grid-template-areas:
+    "masthead masthead"
+    "navigation welcome"
+    "copyright copyright";
+  grid-gap: 20px; /* 20px spacing between rows and columns */
+  max-width: 960px; /* Limit content width */
+  padding: 20px; /* Add 20px padding around the body */
+  height: 100vh; /* Ensure full height of the viewport */
+  box-sizing: border-box;
+}
+
+/* Sectioning elements with their respective grid areas */
+header {
+  grid-area: masthead;
+  background-color: #eee;
+  padding: 20px;
+  text-align: left;
+}
+
+nav {
+  grid-area: navigation;
+  background-color: #eee;
+  padding: 20px;
+}
+
+main {
+  grid-area: welcome;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer {
+  grid-area: copyright;
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Styling the navigation list */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove default bullet points */
+}
+
+li {
+  margin-bottom: 10px; /* Add space between list items */
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "•"; /* Add a dot before each item */
+  color: blue; /* Set the dot color to blue */
+  margin-right: 8px; /* Add space between the dot and the text */
+  font-size: 1.2em;
+}
+
+/* Styling the links */
+a {
+  text-decoration: none;
+  color: blue; /* Make the link color blue */
+  font-weight: bold;
+}
+
+small {
+  color: #666;
+}
