@@ -1,0 +1,35 @@
+body {
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+main {
+  padding: 16px;
+  max-width: 700px;
+  background-color: rgba(223,99,41,0.1);
+}
+
+figure {
+  margin: 16px;
+  width: 48%;
+  float: left;
+}
+
+figure img {
+  width: 100%;
+  border: 1px solid #222;
+}
+
+figure:nth-child(odd) {
+  clear: left;
+}
+
+figure.alt {
+  float: right;
+}
